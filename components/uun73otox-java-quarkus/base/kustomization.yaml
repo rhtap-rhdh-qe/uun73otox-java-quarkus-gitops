@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: uun73otox-java-quarkus
+  janus-idp.io/tekton: uun73otox-java-quarkus
+  backstage.io/kubernetes-id: uun73otox-java-quarkus
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: uun73otox-java-quarkus
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
